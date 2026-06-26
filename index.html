@@ -37,10 +37,8 @@
     filter:drop-shadow(0 3px 5px rgba(74,59,56,.22))}
   .frame .bf-top{left:81.5%;top:26.6%;width:47%;transform:translate(-50%,-50%)}
   .frame .bf-bot{left:9.1%;top:82%;width:35%;transform:translate(-50%,-50%)}
-  @media (prefers-reduced-motion:no-preference){
-    .frame .bf-top img{animation:flutterA 2.6s ease-in-out infinite}
-    .frame .bf-bot img{animation:flutterB 3.2s ease-in-out infinite}
-  }
+  .frame .bf-top img{animation:flutterA 2.6s ease-in-out infinite}
+  .frame .bf-bot img{animation:flutterB 3.2s ease-in-out infinite}
   @keyframes flutterA{0%,100%{transform:translateY(0) rotate(-5deg) scaleX(1)}50%{transform:translateY(-6px) rotate(5deg) scaleX(.9)}}
   @keyframes flutterB{0%,100%{transform:translateY(0) rotate(6deg) scaleX(1)}50%{transform:translateY(-5px) rotate(-6deg) scaleX(.92)}}
 
@@ -59,10 +57,11 @@
     transform-origin:50% 55%;backface-visibility:hidden;
   }
   .frame .frameart{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;display:block}
-  @media (prefers-reduced-motion:no-preference){
-    .frame .photo img.puppet{animation:puppet 2.8s ease-in-out infinite}
-  }
+  .frame .photo img.puppet{animation:puppet 2.8s ease-in-out infinite}
   @keyframes puppet{0%,100%{transform:scale(1.12) rotate(0)}25%{transform:scale(1.12) rotate(-3deg)}50%{transform:scale(1.12) rotate(0)}75%{transform:scale(1.12) rotate(3deg)}}
+  @media (prefers-reduced-motion:reduce){
+    .frame .photo img.puppet,.frame .bf-top img,.frame .bf-bot img{animation:none}
+  }
 
   .initials{
     font-family:'Fraunces',serif;font-size:38px;font-weight:500;
